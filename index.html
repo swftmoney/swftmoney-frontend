@@ -473,7 +473,7 @@
         </section>
         <!-- /landing-section -->
         <section
-          class="py-24 bg-primary px-4 md:px-32 flex flex-col md:flex-row justify-between items-center gap-20 md:gap-36"
+          class="py-24 bg-primary px-4 md:px-32 flex flex-col-reverse md:flex-row justify-between items-center gap-20 md:gap-36"
         >
           <div
             class="px-4 md:px-11 py-28 rounded-2xl"
@@ -531,8 +531,12 @@
               </div>
             </div>
           </div>
-          <div class="flex flex-col">
-            <p class="text-6xl pb-4">Fearlessly scale to new heights</p>
+          <div
+            class="flex flex-col text-center md:text-start items-center md:items-start"
+          >
+            <p class="text-3xl md:text-6xl pb-4">
+              Fearlessly scale to new heights
+            </p>
             <p class="text-sm">
               Now, you can build and diversify your portfolio with thousands of
               US-listed equities and alternative assets.
@@ -545,10 +549,111 @@
             </ul>
           </div>
         </section>
+
+        <section class="flex flex-col bg-primary py-24 gap-12">
+          <div class="flex items-end justify-between px-32">
+            <h1 class="text-3xl md:text-6xl text-center md:text-start">
+              Bank with precision,even<br />at your highest speed
+            </h1>
+            <div class="gap-2 hidden md:flex">
+              <div
+                id="scrollLeftBtn"
+                class="bg-[#F0F1F7] p-2 rotate-180 cursor-pointer rounded-md hover:bg-[#5B1BF4]/50"
+              >
+                <img
+                  src="/imgs/chevronRight.svg"
+                  alt="scroll left stroke-white"
+                />
+              </div>
+              <div
+                id="scrollRightBtn"
+                class="bg-[#F0F1F7] p-2 cursor-pointer rounded-md hover:bg-[#5B1BF4]/50"
+              >
+                <img src="/imgs/chevronRight.svg" alt="scroll left" />
+              </div>
+            </div>
+          </div>
+          <div
+            id="scroll-container"
+            class="flex gap-6 ps-4 md:ps-32 overflow-x-auto whitespace-nowrap scroll-smooth"
+          >
+            <div class="flex flex-col justify-between bg-white rounded-2xl p-8">
+              <div class="flex flex-col gap-3">
+                <p class="text-lg font-semibold">Understand every investment</p>
+                <p
+                  class="text-[#516880] whitespace-pre-line md:whitespace-nowrap"
+                >
+                  Automate recurring payments, accounts payable, and other
+                  banking busywork.
+                </p>
+              </div>
+              <div class="w-full flex md:justify-end mt-8">
+                <div
+                  class="p-6 flex justify-center items-center bg-[#7134FF]/40 rounded-xl"
+                  style="
+                    box-shadow: 0px 13.265px 26.529px 0px
+                      rgba(98, 44, 223, 0.06);
+                  "
+                >
+                  <img
+                    src="/imgs/content-1.png"
+                    alt="content 1"
+                    class="z-10 bg-white rounded-xl"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-col justify-between bg-white rounded-2xl p-8">
+              <div class="flex flex-col gap-3">
+                <p class="text-lg font-semibold">Understand every investment</p>
+                <p
+                  class="text-[#516880] whitespace-pre-line md:whitespace-nowrap"
+                >
+                  Automate recurring payments, accounts payable, and other
+                  banking busywork.
+                </p>
+              </div>
+              <div class="w-full flex md:justify-end mt-8">
+                <div
+                  class="p-6 flex justify-center items-center bg-[#7134FF]/40 rounded-xl"
+                  style="
+                    box-shadow: 0px 13.265px 26.529px 0px
+                      rgba(98, 44, 223, 0.06);
+                  "
+                >
+                  <img
+                    src="/imgs/content-1.png"
+                    alt="content 1"
+                    class="z-10 bg-white rounded-xl"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="flex justify-center">
+            <div class="flex gap-2 md:hidden">
+              <div
+                id="scrollLeftBtn"
+                class="bg-[#F0F1F7] p-2 rotate-180 cursor-pointer rounded-md hover:bg-[#5B1BF4]/50"
+              >
+                <img
+                  src="/imgs/chevronRight.svg"
+                  alt="scroll left stroke-white"
+                />
+              </div>
+              <div
+                id="scrollRightBtn"
+                class="bg-[#F0F1F7] p-2 cursor-pointer rounded-md hover:bg-[#5B1BF4]/50"
+              >
+                <img src="/imgs/chevronRight.svg" alt="scroll left" />
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
       <!-- page_content -->
       <footer
-        class="flex flex-col md:flex-row items-center px-4 py-12 md:px-32 bg-primary gap-2 justify-between"
+        class="flex flex-col md:flex-row items-center px-4 py-12 md:px-32 bg-primary gap-4 md:gap-2 justify-between"
       >
         <div class="flex items-center gap-6 md:gap-24 lg:gap-36">
           <div class="flex gap-1 items-center flex-shrink-0">
@@ -558,7 +663,7 @@
             /></a>
           </div>
         </div>
-        <ul class="list-none gap-8 flex text-sm">
+        <ul class="list-none gap-8 flex flex-col md:flex-row text-sm">
           <li>Overview</li>
           <li>Features</li>
           <li>Features</li>
