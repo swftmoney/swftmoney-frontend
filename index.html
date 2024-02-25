@@ -95,14 +95,16 @@
         </button>
       </header>
       <div class="page_content">
-        <section class="relative bg-sec pt-32 pb-16 overflow-hidden">
+        <section
+          class="relative bg-sec pt-32 pb-16 overflow-hidden px-4 md:px-0"
+        >
           <div class="absolute -right-48 top-0">
             <img src="/imgs/swftLogo.svg" alt="Swft App Logo" width="558px" />
           </div>
           <div
             class="relative flex flex-col justify-center items-center text-white text-center gap-6 z-1"
           >
-            <h1 class="text-7xl font-semibold">
+            <h1 class="text-5xl md:text-7xl font-semibold">
               Banking Reinvented,<br />Empowering Business Success
             </h1>
             <h2 class="text-lg">
@@ -113,7 +115,7 @@
             <div class="flex gap-4">
               <input
                 placeholder="Enter your email"
-                class="py-4 rounded-lg bg-primary ps-4 placeholder:text-sm placeholder:text-[#7A7A8F] min-w-[264px]"
+                class="py-4 rounded-lg bg-primary ps-4 placeholder:text-sm placeholder:text-[#7A7A8F] md:min-w-[264px]"
               />
               <button
                 class="rounded-lg text-white py-3 px-5 font-medium text-sm leading-6"
@@ -137,9 +139,11 @@
           <div
             class="relative flex flex-col justify-center items-center text-white z-1"
           >
-            <div class="flex mt-20 gap-28">
+            <div
+              class="flex flex-col md:flex-row mt-20 md:gap-28 w-full md:w-fit"
+            >
               <div
-                class="rounded-xl text-white flex flex-col w-[567px]"
+                class="rounded-xl text-white flex flex-col w-full md:w-[567px]"
                 style="
                   border: 1px solid rgba(234, 236, 240, 0.06);
                   background: linear-gradient(
@@ -174,7 +178,7 @@
                   <img
                     src="/imgs/graphStroke.svg"
                     alt="Transfer Icon"
-                    class="w-full absolute top-2"
+                    class="w-full absolute top-0 md:top-2"
                   />
                   <img
                     src="/imgs/swftGraph.svg"
@@ -197,7 +201,7 @@
                 </div>
               </div>
               <div
-                class="rounded-xl text-white flex flex-col w-[456px] mt-12 h-fit"
+                class="rounded-xl text-white flex flex-col w-full md:w-[456px] mt-12 h-fit"
                 style="
                   border: 1px solid rgba(234, 236, 240, 0.06);
                   background: linear-gradient(
@@ -228,7 +232,7 @@
                           );
                         "
                       ></div>
-                      <p>Used EGP 35,000</p>
+                      <p class="text-sm md:text-base pt-2">Used EGP 35,000</p>
                     </div>
                   </div>
                 </div>
@@ -247,9 +251,9 @@
                 </div>
               </div>
             </div>
-            <div class="flex gap-28">
+            <div class="flex md:gap-28 flex-col md:flex-row w-full md:w-fit">
               <div
-                class="rounded-xl text-white flex flex-col w-[456px] mt-12 h-fit"
+                class="rounded-xl text-white flex flex-col w-full md:w-[456px] mt-12 h-fit"
                 style="
                   border: 1px solid rgba(234, 236, 240, 0.06);
                   background: linear-gradient(
@@ -291,7 +295,7 @@
                       </div>
                       <p>Cairo office</p>
                     </div>
-                    <p>EGP 100,233.92</p>
+                    <p class="flex-shrink-0">EGP 100,233.92</p>
                   </li>
                   <li class="flex justify-between items-center">
                     <div class="flex gap-3 items-center">
@@ -315,7 +319,7 @@
                       </div>
                       <p>Local stores</p>
                     </div>
-                    <p>EGP 200,500.80</p>
+                    <p class="flex-shrink-0">EGP 200,500.80</p>
                   </li>
                   <li class="flex justify-between items-center">
                     <div class="flex gap-3 items-center">
@@ -339,7 +343,7 @@
                       </div>
                       <p>Virtual and online</p>
                     </div>
-                    <p>EGP 50,433.00</p>
+                    <p class="flex-shrink-0">EGP 50,433.00</p>
                   </li>
                   <li class="flex justify-between items-center">
                     <div class="flex gap-3 items-center">
@@ -363,12 +367,12 @@
                       </div>
                       <p>Distribution centers</p>
                     </div>
-                    <p>EGP 99,223.00</p>
+                    <p class="flex-shrink-0">EGP 99,223.00</p>
                   </li>
                 </ul>
               </div>
               <div
-                class="rounded-xl text-white flex flex-col w-[456px] mt-12 h-fit"
+                class="rounded-xl text-white flex flex-col w-full md:w-[456px] mt-12 h-fit"
                 style="
                   border: 1px solid rgba(234, 236, 240, 0.06);
                   background: linear-gradient(
@@ -406,7 +410,7 @@
               </div>
             </div>
             <div
-              class="rounded-xl p-5 text-white flex flex-col w-[430px] mt-12 h-fit absolute top-1/2 left-1/3 translate-x-[15%] -translate-y-3/4"
+              class="rounded-xl p-5 text-white flex flex-col w-full md:w-[430px] mt-12 h-fit md:absolute md:top-1/2 md:left-1/3 md:translate-x-[15%] md:-translate-y-3/4"
               style="
                 background: linear-gradient(
                   110deg,
@@ -450,14 +454,14 @@
         </section>
         <!-- /landing-section -->
         <section
-          class="py-24 bg-primary px-32 flex justify-between items-center gap-36"
+          class="py-24 bg-primary px-4 md:px-32 flex flex-col md:flex-row justify-between items-center gap-36"
         >
           <div
-            class="px-11 py-28 rounded-2xl"
+            class="px-4 md:px-11 py-28 rounded-2xl"
             style="box-shadow: 0px 20px 40px 0px rgba(98, 44, 223, 0.06)"
           >
             <div
-              class="rounded-xl text-black flex flex-col w-[567px]"
+              class="rounded-xl text-black flex flex-col w-full md:w-[493px]"
               style="
                 box-shadow: 0px 0.869px 1.739px 0px rgba(16, 24, 40, 0.05),
                   0px 12px 32px 0px rgba(0, 0, 0, 0.07);
@@ -493,7 +497,7 @@
                   class="w-full h-full rounded-xl"
                 />
                 <ul
-                  class="absolute w-full bottom-0 flex px-4 pb-2 list-none text-black justify-between text-sm"
+                  class="absolute w-full bottom-0 flex px-1 md:px-4 pb-1 md:pb-2 list-none text-black justify-between text-xs"
                 >
                   <li>Jan</li>
                   <li>Feb</li>
