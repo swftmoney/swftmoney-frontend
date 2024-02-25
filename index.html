@@ -27,11 +27,6 @@
       type="text/css"
       media="screen"
     />
-    <script
-      type="text/javascript"
-      src="/js/jquery.min.js?ver=6.4.1"
-      id="ml_jquery-js"
-    ></script>
     <meta name="generator" content="WordPress 6.4.1" />
     <link rel="canonical" href="https://swftmoney.com/swft-business.html" />
     <link
@@ -62,8 +57,24 @@
       };
     </script>
   </head>
-  <body>
-    <section class="wrapper">
+  <body class="relative">
+    <div id="navbar" class="fixed top-0 w-screen h-screen hidden bg-sec z-10">
+      <button
+        id="exit-navbar"
+        class="text-white text-5xl absolute top-10 right-10"
+      >
+        X
+      </button>
+      <navbar
+        class="h-full flex flex-col items-center justify-center gap-8 text-white text-3xl list-none"
+      >
+        <li>Hello</li>
+        <li>Hello</li>
+        <li>Hello</li>
+        <li>Hello</li>
+      </navbar>
+    </div>
+    <section>
       <header
         class="flex items-center pt-4 px-4 md:pt-10 md:px-32 bg-sec gap-2 justify-between"
       >
@@ -74,25 +85,33 @@
               <img src="/imgs/swftTextWhite.svg" alt="Swift App Text" />
             </a>
           </div>
-          <ul class="list-none text-white text-sm gap-8 flex">
+          <navbar class="list-none text-white text-sm gap-8 hidden md:flex">
             <li>Hello</li>
             <li>Hello</li>
             <li>Hello</li>
             <li>Hello</li>
-          </ul>
+          </navbar>
         </div>
-        <button
-          class="rounded-lg text-white py-3 px-5 font-medium text-sm leading-6"
-          style="
-            background: linear-gradient(
-              110deg,
-              #7e47ff -5.94%,
-              #4a10d0 100.94%
-            );
-          "
-        >
-          Contact Us
-        </button>
+        <div class="flex items-center gap-2">
+          <button
+            class="rounded-lg text-white py-3 px-5 font-medium text-sm leading-6"
+            style="
+              background: linear-gradient(
+                110deg,
+                #7e47ff -5.94%,
+                #4a10d0 100.94%
+              );
+            "
+          >
+            Contact Us
+          </button>
+          <img
+            id="burger"
+            src="/imgs/burger.svg"
+            alt="Burger menu"
+            class="cursor-pointer block md:hidden"
+          />
+        </div>
       </header>
       <div class="page_content">
         <section
@@ -454,7 +473,7 @@
         </section>
         <!-- /landing-section -->
         <section
-          class="py-24 bg-primary px-4 md:px-32 flex flex-col md:flex-row justify-between items-center gap-36"
+          class="py-24 bg-primary px-4 md:px-32 flex flex-col md:flex-row justify-between items-center gap-20 md:gap-36"
         >
           <div
             class="px-4 md:px-11 py-28 rounded-2xl"
@@ -550,5 +569,10 @@
       </footer>
     </section>
     <!-- /wrapper -->
+    <script
+      type="text/javascript"
+      src="/js/index.js"
+      id="javascript file"
+    ></script>
   </body>
 </html>
