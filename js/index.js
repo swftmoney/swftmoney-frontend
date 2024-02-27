@@ -4,6 +4,31 @@ var exitNavbarButton = document.getElementById("exit-navbar");
 var scrollContainer = document.getElementById("scroll-container");
 var scrollLeftBtn = document.getElementById("scrollLeftBtn");
 var scrollRightBtn = document.getElementById("scrollRightBtn");
+var snapBar = document.getElementById("snap-bar");
+var scrollMain = document.getElementById("scroll-main");
+
+const scrollEvent = () => {
+  if (scrollMain.scrollTop === 0) {
+    snapBar.style.top = `0%`;
+  }
+  if (scrollMain.scrollTop > 0 && scrollMain.scrollTop <= window.innerHeight) {
+    snapBar.style.top = `25%`;
+  }
+  if (
+    scrollMain.scrollTop > window.innerHeight &&
+    scrollMain.scrollTop <= 2 * window.innerHeight
+  ) {
+    snapBar.style.top = `50%`;
+  }
+  if (
+    scrollMain.scrollTop > 2 * window.innerHeight &&
+    scrollMain.scrollTop <= 3 * window.innerHeight
+  ) {
+    snapBar.style.top = `75%`;
+  }
+};
+
+scrollMain.addEventListener("scroll", scrollEvent);
 
 // Function to scroll the container to the left
 function scrollLeft() {
