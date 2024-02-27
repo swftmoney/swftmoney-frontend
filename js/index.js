@@ -8,6 +8,7 @@ var snapBar = document.getElementById("snap-bar");
 var scrollMain = document.getElementById("scroll-main");
 
 const scrollEvent = () => {
+  console.log({ mmm: scrollMain.scrollTop, yyy: window.innerHeight });
   if (scrollMain.scrollTop === 0) {
     snapBar.style.top = `0%`;
   }
