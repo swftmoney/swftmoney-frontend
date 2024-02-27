@@ -8,22 +8,27 @@ var snapBar = document.getElementById("snap-bar");
 var scrollMain = document.getElementById("scroll-main");
 
 const scrollEvent = () => {
-  console.log({ mmm: scrollMain.scrollTop, yyy: window.innerHeight });
-  if (scrollMain.scrollTop === 0) {
+  if (
+    scrollMain.scrollTop > 0 &&
+    scrollMain.scrollTop <= window.innerHeight / 2
+  ) {
     snapBar.style.top = `0%`;
   }
-  if (scrollMain.scrollTop > 0 && scrollMain.scrollTop <= window.innerHeight) {
+  if (
+    scrollMain.scrollTop > window.innerHeight / 2 &&
+    scrollMain.scrollTop <= (3 * window.innerHeight) / 2
+  ) {
     snapBar.style.top = `25%`;
   }
   if (
-    scrollMain.scrollTop > window.innerHeight &&
-    scrollMain.scrollTop <= 2 * window.innerHeight
+    scrollMain.scrollTop > (3 * window.innerHeight) / 2 &&
+    scrollMain.scrollTop <= (5 * window.innerHeight) / 2
   ) {
     snapBar.style.top = `50%`;
   }
   if (
-    scrollMain.scrollTop > 2 * window.innerHeight &&
-    scrollMain.scrollTop <= 3 * window.innerHeight
+    scrollMain.scrollTop > (5 * window.innerHeight) / 2 &&
+    scrollMain.scrollTop <= (7 * window.innerHeight) / 2
   ) {
     snapBar.style.top = `75%`;
   }
