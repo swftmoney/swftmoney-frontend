@@ -100,7 +100,7 @@
               );
             "
             onClick="location.href='mailto:ahmed@swftmoney.com'"
-            >
+          >
             Contact Us
           </button>
           <!-- <img
@@ -268,7 +268,7 @@
                 <div class="flex justify-between px-5 text-sm font-medium">
                   <div class="py-5 flex flex-col gap-1 w-1/2">
                     <p>Duration</p>
-                    <p>22.1s</p>
+                    <p>3 months</p>
                   </div>
                   <div
                     class="py-5 flex w-1/2 flex-col gap-1 border-s ps-4 border-white/5"
@@ -484,81 +484,358 @@
           </div>
         </section>
         <!-- /landing-section -->
-        <section
-          class="py-24 bg-primary px-4 md:px-32 flex flex-col-reverse md:flex-row justify-between items-center gap-20 md:gap-28"
-        >
+        <section class="relative">
           <div
-            class="px-4 md:px-11 py-8 md:py-28 rounded-2xl"
-            style="box-shadow: 0px 20px 40px 0px rgba(98, 44, 223, 0.06)"
+            class="absolute left-10 h-[320px] items-center top-1/2 -translate-y-1/2 gap-3 hidden md:flex flex-col"
+          >
+            <p class="text-base font-semibold text-[#5B1BF4]">01</p>
+            <div class="relative h-full bg-[#EBE9F0] w-1 rounded-full">
+              <div
+                id="snap-bar"
+                class="p-0.5 leading-none rounded-full h-1 transition-all"
+                style="
+                  position: absolute;
+                  top: 0;
+                  height: 25%;
+                  background: linear-gradient(
+                    145deg,
+                    #a178ff -463.39%,
+                    #4d13d4 206.86%
+                  );
+                "
+              ></div>
+            </div>
+            <p class="text-base font-semibold">04</p>
+          </div>
+          <div
+            id="scroll-main"
+            class="snap-y h-screen snap-mandatory overflow-auto bg-primary"
           >
             <div
-              class="rounded-xl text-black flex flex-col w-full md:w-[493px]"
-              style="
-                box-shadow: 0px 0.869px 1.739px 0px rgba(16, 24, 40, 0.05),
-                  0px 12px 32px 0px rgba(0, 0, 0, 0.07);
-              "
+              id="snap-1"
+              class="snap-center h-screen py-24 px-4 md:px-32 flex flex-col-reverse md:flex-row justify-between items-center gap-20 md:gap-28"
             >
-              <p class="pt-5 ps-5 pb-1 font-semibold text-sm">Swft balance</p>
-              <div class="flex justify-between items-center pb-3 ps-5 pe-5">
-                <p class="font-semibold text-base">EGP 500,420.00</p>
-                <div class="flex gap-1 text-xs font-medium">
-                  <div class="flex items-center">
-                    <img src="/imgs/arrowUp.svg" alt="Transfer Icon" />
-                    <p class="ps-1">EGP 700K</p>
+              <div
+                class="px-4 md:px-11 py-8 md:py-28 rounded-2xl flex justify-center items-center"
+                style="box-shadow: 0px 20px 40px 0px rgba(98, 44, 223, 0.06)"
+              >
+                <div
+                  class="rounded-xl text-black flex flex-col w-full md:w-[493px]"
+                  style="
+                    box-shadow: 0px 0.869px 1.739px 0px rgba(16, 24, 40, 0.05),
+                      0px 12px 32px 0px rgba(0, 0, 0, 0.07);
+                  "
+                >
+                  <p class="pt-5 ps-5 pb-1 font-semibold text-sm">
+                    Swft balance
+                  </p>
+                  <div class="flex justify-between items-center pb-3 ps-5 pe-5">
+                    <p class="font-semibold text-base">EGP 500,420.00</p>
+                    <div class="flex gap-1 text-xs font-medium">
+                      <div class="flex items-center">
+                        <img src="/imgs/arrowUp.svg" alt="Transfer Icon" />
+                        <p class="ps-1">EGP 700K</p>
+                      </div>
+                      <div class="flex items-center">
+                        <img src="/imgs/arrowDown.svg" alt="Transfer Icon" />
+                        <p class="ps-1">EGP -200K</p>
+                      </div>
+                    </div>
                   </div>
-                  <div class="flex items-center">
-                    <img src="/imgs/arrowDown.svg" alt="Transfer Icon" />
-                    <p class="ps-1">EGP -200K</p>
+                  <div class="ps-5 flex items-center gap-1">
+                    <p class="text-xs font-medium">Last 30 days</p>
+                    <img src="/imgs/chevronDown.svg" alt="Transfer Icon" />
+                  </div>
+                  <div class="w-full relative h-full">
+                    <img
+                      src="/imgs/graphStroke.svg"
+                      alt="Transfer Icon"
+                      class="w-full absolute -top-1"
+                    />
+                    <img
+                      src="/imgs/swftGraph.svg"
+                      alt="Transfer Icon"
+                      class="w-full h-full rounded-xl"
+                    />
+                    <ul
+                      class="absolute w-full bottom-0 flex px-1 md:px-4 pb-1 md:pb-2 list-none text-black justify-between text-[10px]"
+                    >
+                      <li>Jan</li>
+                      <li>Feb</li>
+                      <li>Mar</li>
+                      <li>Apr</li>
+                      <li>May</li>
+                      <li>Jun</li>
+                      <li>Jul</li>
+                      <li>Aug</li>
+                      <li>Sep</li>
+                    </ul>
                   </div>
                 </div>
               </div>
-              <div class="ps-5 flex items-center gap-1">
-                <p class="text-xs font-medium">Last 30 days</p>
-                <img src="/imgs/chevronDown.svg" alt="Transfer Icon" />
-              </div>
-              <div class="w-full relative h-full">
-                <img
-                  src="/imgs/graphStroke.svg"
-                  alt="Transfer Icon"
-                  class="w-full absolute -top-1"
-                />
-                <img
-                  src="/imgs/swftGraph.svg"
-                  alt="Transfer Icon"
-                  class="w-full h-full rounded-xl"
-                />
-                <ul
-                  class="absolute w-full bottom-0 flex px-1 md:px-4 pb-1 md:pb-2 list-none text-black justify-between text-[10px]"
-                >
-                  <li>Jan</li>
-                  <li>Feb</li>
-                  <li>Mar</li>
-                  <li>Apr</li>
-                  <li>May</li>
-                  <li>Jun</li>
-                  <li>Jul</li>
-                  <li>Aug</li>
-                  <li>Sep</li>
+              <div
+                class="flex flex-col text-center md:text-start items-center md:items-start"
+              >
+                <p class="text-3xl md:text-6xl font-semibold pb-4">
+                  Unlock your business power
+                </p>
+                <p class="text-sm">
+                  Bank without hassle: paperless, instant tasks in clicks.
+                  Seamlessly smart, lightning speed, tailored just for you.
+                </p>
+                <ul class="flex gap-9 list-none text-sm mt-10">
+                  <li class="text-[#541BD9] list-disc font-semibold">
+                    Banking
+                  </li>
+                  <li>Financing</li>
+                  <li>Management</li>
+                  <li>Card</li>
                 </ul>
               </div>
             </div>
-          </div>
-          <div
-            class="flex flex-col text-center md:text-start items-center md:items-start"
-          >
-            <p class="text-3xl md:text-6xl font-semibold pb-4">
-              Unlock your business power
-            </p>
-            <p class="text-sm">
-              Bank without hassle: paperless, instant tasks in clicks.
-              Seamlessly smart, lightning speed, tailored just for you.
-            </p>
-            <ul class="flex gap-9 list-none text-sm mt-10">
-              <li>Banking</li>
-              <li>Financing</li>
-              <li>Management</li>
-              <li>Card</li>
-            </ul>
+            <div
+              id="snap-2"
+              class="snap-center h-screen py-24 px-4 md:px-32 flex flex-col-reverse md:flex-row justify-between items-center gap-20 md:gap-28"
+            >
+              <div
+                class="px-4 md:px-11 py-8 md:py-28 rounded-2xl flex justify-center items-center"
+                style="box-shadow: 0px 20px 40px 0px rgba(98, 44, 223, 0.06)"
+              >
+                <div
+                  class="rounded-xl flex flex-col w-full md:w-[456px] mt-12 h-fit"
+                  style="
+                    border: 1px solid rgba(234, 236, 240, 0.06);
+                    background: linear-gradient(
+                      308deg,
+                      rgba(255, 255, 255, 0.02) -16.42%,
+                      rgba(255, 255, 255, 0) 88.31%
+                    );
+
+                    box-shadow: 0px 12px 32px 0px rgba(0, 0, 0, 0.04);
+                    backdrop-filter: blur(10px);
+                  "
+                >
+                  <p class="pt-5 ps-5 pb-1 font-semibold text-base">
+                    Credit Limit
+                  </p>
+                  <div
+                    class="flex justify-between items-center pb-3 ps-5 pe-5 gap-12"
+                  >
+                    <p class="font-semibold flex-shrink-0 text-base">
+                      EGP <span class="text-2xl">100,420.00</span>
+                    </p>
+                    <div class="flex flex-col gap-3">
+                      <div class="w-full bg-[#EBE9F0] rounded-full h-2">
+                        <div
+                          class="p-0.5 leading-none rounded-full h-2"
+                          style="
+                            width: 50%;
+                            background: linear-gradient(
+                              268deg,
+                              #a178ff -14.87%,
+                              #4d13d4 77.32%
+                            );
+                          "
+                        ></div>
+                        <p class="text-sm md:text-base pt-2">
+                          <span class="text-gray-600">Used</span>
+                          <span class="font-semibold">EGP 35,000</span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="h-0.5 w-full bg-[#EAECF0] mt-8"></div>
+                  <div class="flex justify-between px-5 text-sm font-medium">
+                    <div class="py-5 flex flex-col gap-1 w-1/2">
+                      <p class="text-gray-600">Duration</p>
+                      <p>3 months</p>
+                    </div>
+                    <div
+                      class="py-5 flex w-1/2 flex-col gap-1 border-s ps-4 border-[#EAECF0]"
+                    >
+                      <p class="text-gray-600">Interest Rate</p>
+                      <p>10.6%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col text-center md:text-start items-center md:items-start"
+              >
+                <p class="text-3xl md:text-6xl font-semibold pb-4">
+                  Elevate your financial journey
+                </p>
+                <p class="text-sm">
+                  Fuel your growth with flexible financing, scaling your
+                  ambitions while supporting your financial health.
+                </p>
+                <ul class="flex gap-9 list-none text-sm mt-10">
+                  <li>Banking</li>
+                  <li class="text-[#541BD9] list-disc font-semibold">
+                    Financing
+                  </li>
+                  <li>Management</li>
+                  <li>Card</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              id="snap-3"
+              class="snap-center h-screen py-24 px-4 md:px-32 flex flex-col-reverse md:flex-row justify-between items-center gap-20 md:gap-28"
+            >
+              <div
+                class="px-4 md:px-11 py-8 md:py-28 rounded-2xl flex justify-center items-center"
+                style="box-shadow: 0px 20px 40px 0px rgba(98, 44, 223, 0.06)"
+              >
+                <div
+                  class="w-[406px] flex flex-col py-6 px-4 rounded-2xl"
+                  style="box-shadow: 0px 12px 32px 0px rgba(0, 0, 0, 0.04)"
+                >
+                  <p class="text-base font-medium mb-6">Utilities Budgets</p>
+                  <p class="text-sm font-medium mb-1">Budget Owner</p>
+                  <div
+                    class="flex py-3 px-2 justify-between items-center border border-gray-200 rounded-lg mb-6"
+                  >
+                    <div class="flex ps-2">
+                      <img
+                        src="/imgs/avatar.png"
+                        class="rounded-full flex-shrink-0"
+                      />
+                      <div class="ps-2">
+                        <p class="text-sm font-medium text-gray-700">
+                          Lana Steiner
+                        </p>
+                        <p class="text-xs text-gray-600">+2010390589123</p>
+                      </div>
+                    </div>
+                    <div
+                      class="w-fit py-0.5 px-2 flex justify-center items-center border border-[#ABEFC6] rounded-2xl bg-[#ECFDF3]"
+                    >
+                      <p class="text-[#067647] text-xs font-medium">Admin</p>
+                    </div>
+                  </div>
+                  <div
+                    class="flex flex-col py-5 px-4 rounded-xl border border-[#EAECF0]"
+                  >
+                    <div class="flex gap-1 items-end mb-5">
+                      <span class="text-xl font-semibold">EGP10,00.00</span>
+                      <span class="text-base font-medium text-[#667085]"
+                        >Spent</span
+                      >
+                    </div>
+                    <div class="w-full bg-gray-200 rounded-full h-2 mb-3">
+                      <div
+                        class="p-0.5 leading-none rounded-full h-2"
+                        style="
+                          width: 60%;
+                          background: linear-gradient(
+                            180deg,
+                            #a178ff -25%,
+                            #4d13d4 125%
+                          );
+                        "
+                      ></div>
+                    </div>
+                    <div class="flex justify-between">
+                      <div class="flex gap-2">
+                        <span class="text-sm text-gray-600">Available</span>
+                        <span class="text-sm font-semibold">EGP 10,000</span>
+                      </div>
+                      <div class="flex gap-2">
+                        <span class="text-sm text-gray-600">Limit</span>
+                        <span class="text-sm font-semibold">EGP 20,000</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col text-center md:text-start items-center md:items-start"
+              >
+                <p class="text-3xl md:text-6xl font-semibold pb-4">
+                  Control spend effortlessly
+                </p>
+                <p class="text-sm">
+                  Manage your finances effectively: Utilize smart safes and
+                  budgets for efficient fund allocation and spending control.
+                </p>
+                <ul class="flex gap-9 list-none text-sm mt-10">
+                  <li>Banking</li>
+                  <li>Financing</li>
+                  <li class="text-[#541BD9] list-disc font-semibold">
+                    Management
+                  </li>
+                  <li>Card</li>
+                </ul>
+              </div>
+            </div>
+            <div
+              id="snap-4"
+              class="snap-center h-screen py-24 px-4 md:px-32 flex flex-col-reverse md:flex-row justify-between items-center gap-20 md:gap-28"
+            >
+              <div
+                class="px-4 md:px-11 py-8 md:py-28 rounded-2xl flex justify-center items-center"
+                style="box-shadow: 0px 20px 40px 0px rgba(98, 44, 223, 0.06)"
+              >
+                <div
+                  class="rounded-xl p-5 flex flex-col w-full md:w-[430px] mt-12 h-fit"
+                  style="
+                    background: white;
+
+                    box-shadow: 0px 20px 48px -8px rgba(255, 255, 255, 0.07);
+                  "
+                >
+                  <div class="flex flex-col h-full justify-between">
+                    <div class="relative z-10 flex flex-col">
+                      <div class="flex items-center justify-between">
+                        <p class="font-semibold text-xl">Virtual Card</p>
+                        <img
+                          src="/imgs/swftLogoTextBlack.svg"
+                          alt="Swift App Text"
+                        />
+                      </div>
+                      <ul class="mt-1.5 ms-3">
+                        <li
+                          class="text-[#4444E0] font-medium text-base list-disc"
+                        >
+                          Frozen
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="mt-3 flex justify-end">
+                      <img src="/imgs/wifiBlack.svg" alt="wifi icon" />
+                    </div>
+                    <div class="flex justify-between mt-6">
+                      <div class="flex flex-col gap-0.5 font-medium text-lg">
+                        <p>•••• •••• •••• 3745</p>
+                        <div class="flex gap-5">
+                          <p>EXP ••/••</p>
+                          <p>CVC •••</p>
+                        </div>
+                      </div>
+                      <img src="/imgs/masterCard.svg" alt="master card icon" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="flex flex-col text-center md:text-start items-center md:items-start"
+              >
+                <p class="text-3xl md:text-6xl font-semibold pb-4">
+                  Fast-track your financial growth
+                </p>
+                <p class="text-sm">
+                  Control your spending, earn rewards, simplify expenses, and
+                  enjoy financial flexibility with corporate cards.
+                </p>
+                <ul class="flex gap-9 list-none text-sm mt-10">
+                  <li>Banking</li>
+                  <li>Financing</li>
+                  <li>Management</li>
+                  <li class="text-[#541BD9] list-disc font-semibold">Card</li>
+                </ul>
+              </div>
+            </div>
           </div>
         </section>
 
