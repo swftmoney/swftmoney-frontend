@@ -6,6 +6,56 @@ var scrollLeftBtn = document.getElementById("scrollLeftBtn");
 var scrollRightBtn = document.getElementById("scrollRightBtn");
 var snapBar = document.getElementById("snap-bar");
 var scrollMain = document.getElementById("scroll-main");
+var emailInput = document.getElementById("email-input");
+var emailBtn = document.getElementById("email-btn");
+var emailError = document.getElementById("email-error");
+
+const sendEmail = async () => {
+  var validRegex =
+    /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+  const email = emailInput.value;
+
+  if (email) {
+    if (email.match(validRegex)) {
+      const response = await fetch(
+        `https://eoffhavj1g6gv3m.m.pipedream.net/?email=${email}`
+      );
+      if (response.ok) {
+        emailError.style.display = "block";
+        emailError.innerText =
+          "Thank you for contacting us! Your email has been successfully submitted.";
+        emailError.classList.add("text-green-500");
+      } else {
+        emailError.style.display = "block";
+        emailError.innerText = "Something went wrong. Please try again later.";
+        emailError.classList.add("text-red-500");
+        emailInput.focus();
+        setTimeout(() => {
+          emailError.style.display = "none";
+        }, 5000);
+        return;
+      }
+    } else {
+      emailError.style.display = "block";
+      emailError.innerText = "Please enter a valid email";
+      emailError.classList.add("text-red-500");
+      emailInput.focus();
+      setTimeout(() => {
+        emailError.style.display = "none";
+      }, 5000);
+    }
+  } else {
+    emailError.style.display = "block";
+    emailError.innerText = "Please enter an email";
+    emailError.classList.add("text-red-500");
+    emailInput.focus();
+    setTimeout(() => {
+      emailError.style.display = "none";
+    }, 5000);
+  }
+};
+
+emailBtn.addEventListener("click", sendEmail);
 
 const scrollEvent = () => {
   if (
@@ -54,12 +104,6 @@ scrollLeftBtn.addEventListener("click", scrollLeft);
 scrollRightBtn.addEventListener("click", scrollRight);
 
 // Add an event listener for the "click" event
-burgerButton.addEventListener("click", function () {
-  // Your code to be executed when the button is clicked
-  toggleNavbar();
-});
+// burgerButton.addEventListener("click", toggleNavbar);
 
-exitNavbarButton.addEventListener("click", function () {
-  // Your code to be executed when the button is clicked
-  toggleNavbar();
-});
+// exitNavbarButton.addEventListener("click", toggleNavbar);
