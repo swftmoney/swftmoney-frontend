@@ -9,6 +9,7 @@ var scrollMain = document.getElementById("scroll-main");
 var emailInput = document.getElementById("email-input");
 var emailBtn = document.getElementById("email-btn");
 var emailError = document.getElementById("email-error");
+var emailWrapper = document.getElementById("email-wrapper");
 
 const sendEmail = async () => {
   var validRegex =
@@ -25,6 +26,7 @@ const sendEmail = async () => {
         emailError.innerText =
           "Thank you for contacting us! Your email has been successfully submitted.";
         emailError.classList.add("text-green-500");
+        emailWrapper.style.display = "none";
       } else {
         emailError.style.display = "block";
         emailError.innerText = "Something went wrong. Please try again later.";
@@ -54,6 +56,12 @@ const sendEmail = async () => {
     }, 5000);
   }
 };
+
+emailInput.addEventListener("keyup", function (event) {
+  if (event.key === "Enter") {
+    sendEmail();
+  }
+});
 
 emailBtn.addEventListener("click", sendEmail);
 
